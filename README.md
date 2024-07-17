@@ -15,6 +15,6 @@ This project provides the structure and styling for a news homepage, similar to 
 
 To get started with this project, you can clone the repository and open the HTML file in your browser.
 
-```bash
+```sh
 git clone https://github.com/your-username/news-homepage.git
 cd news-homepage
