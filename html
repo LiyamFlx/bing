@@ -4,227 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #fff;
-            padding: 10px 20px;
-            border-bottom: 2px solid #e0e0e0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .header .logo {
-            flex-grow: 1;
-            text-align: center;
-        }
-        .header .search-bar, .header .menu-icon {
-            flex-grow: 1;
-        }
-        .header input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .header .menu-icon i {
-            font-size: 24px;
-            cursor: pointer;
-        }
-        .nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: #007bff;
-            padding: 10px 0;
-            color: #fff;
-            flex-wrap: wrap;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #fff;
-            padding: 0 15px;
-            font-weight: bold;
-        }
-        .nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .main-content, .sidebar {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .featured, .article {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .featured:hover, .article:hover {
-            transform: translateY(-10px);
-        }
-        .featured img, .article img {
-            width: 100%;
-            height: auto;
-        }
-        .content {
-            padding: 15px;
-            flex-grow: 1;
-        }
-        .title {
-            font-size: 1.2em;
-            margin: 0 0 10px 0;
-            color: #333;
-        }
-        .text {
-            font-size: 1em;
-            color: #777;
-        }
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .widget {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .footer {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-top: 2px solid #e0e0e0;
-        }
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="menu-icon"><i class="fas fa-bars"></i></div>
+        <div class="search-bar"><input type="text" placeholder="Search"></div>
+        <div class="logo"><h1>Blog Logo</h1></div>
+    </div>
 
-<div class="header">
-    <div class="menu-icon"><i class="fas fa-bars"></i></div>
-    <div class="search-bar"><input type="text" placeholder="Search"></div>
-    <div class="logo"><h1>Blog Logo</h1></div>
-</div>
+    <!-- Navigation Section -->
+    <div class="nav">
+        <a href="#">Work feed</a>
+        <a href="#">Discover</a>
+        <!-- More links -->
+    </div>
 
-<div class="nav">
-    <a href="#">Work feed</a>
-    <a href="#">Discover</a>
-    <a href="#">Following</a>
-    <a href="#">News</a>
-    <a href="#">Sports</a>
-    <a href="#">Play</a>
-    <a href="#">Money</a>
-    <a href="#">Gaming</a>
-    <a href="#">Weather</a>
-    <a href="#">Watch</a>
-    <a href="#">Learning</a>
-    <a href="#">Shopping</a>
-    <a href="#">Health</a>
-    <a href="#">Travel</a>
-    <a href="#">Traffic</a>
-    <a href="#">Autos</a>
-    <a href="#">Real Estate</a>
-    <a href="#" style="margin-left: auto;">Personalize</a>
-</div>
-
-<div class="container">
-    <div class="main-content">
-        <div class="featured">
-            <img src="https://example.com/featured-image.jpg" alt="Featured">
-            <div class="content">
-                <h2 class="title">James Webb Space Telescope's Amazing View Of Most Distant Star</h2>
-                <p class="text">A detailed description of the news content goes here...</p>
+    <!-- Main Content Area -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Featured Articles -->
+            <div class="featured">
+                <img src="https://example.com/featured-image.jpg" alt="Featured" id="featured-image">
+                <div class="content">
+                    <h2 class="title" id="featured-title">Loading...</h2>
+                    <p class="text" id="featured-text">Loading...</p>
+                </div>
+            </div>
+            <!-- Additional Articles -->
+            <div class="article" id="article-1">
+                <img src="https://example.com/article1.jpg" alt="Article">
+                <div class="content">
+                    <h3 class="title">Loading...</h3>
+                    <p class="text">Loading...</p>
+                </div>
             </div>
         </div>
-        <div class="article">
-            <img src="https://example.com/article1.jpg" alt="Article">
-            <div class="content">
-                <h3 class="title">A mysterious 4,000-year-old slab may be a treasure map</h3>
-                <p class="text">Brief description of the article...</p>
+        <div class="sidebar">
+            <!-- Widgets -->
+            <div class="widget" id="top-stories">
+                <h3>Top stories</h3>
+                <p>Loading...</p>
+                <a href="#">See more</a>
             </div>
-        </div>
-        <div class="article">
-            <img src="https://example.com/article2.jpg" alt="Article">
-            <div class="content">
-                <h3 class="title">Construction Of World's Biggest Astronomy Digital Camera Completed</h3>
-                <p class="text">Brief description of the article...</p>
-            </div>
-        </div>
-        <div class="article">
-            <img src="https://example.com/article3.jpg" alt="Article">
-            <div class="content">
-                <h3 class="title">Artificial intelligence could help make quantum computers a reality</h3>
-                <p class="text">Brief description of the article...</p>
+            <div class="widget" id="watchlist-movers">
+                <h3>Watchlist movers</h3>
+                <p>Loading...</p>
             </div>
         </div>
     </div>
-    <div class="sidebar">
-        <div class="widget">
-            <h3>Top stories</h3>
-            <p>Breaking news and updates...</p>
-            <a href="#">See more</a>
-        </div>
-        <div class="widget">
-            <h3>Watchlist movers</h3>
-            <p>EVOKE plc: +1.23% <br> Entain plc: -0.56% <br> Compass Group plc: +0.89% <br> Joyy Inc.: +2.34% <br> Revolution Bars Group plc: -0.45%</p>
-        </div>
-        <div class="widget">
-            <h3>Games</h3>
-            <ul>
-                <li>Bubble Shooter HD</li>
-                <li>BlockBuster Adventure</li>
-                <li>Master Chess</li>
-                <li>Microsoft Solitaire Collection</li>
-                <li>Mergest Kingdom</li>
-                <li>Cut the Rope</li>
-            </ul>
-            <a href="#">Explore more games</a>
-        </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Blog. All rights reserved.</p>
     </div>
-</div>
 
-<div class="footer">
-    <p>&copy; 2024 Blog. All rights reserved.</p>
-</div>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
