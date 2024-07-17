@@ -9,7 +9,11 @@
 </head>
 <body>
 
-{% include 'partials/header.html' %}
+<div class="header">
+    <div class="menu-icon"><i class="fas fa-bars"></i></div>
+    <div class="search-bar"><input type="text" placeholder="Search"></div>
+    <div class="logo"><h1>Blog Logo</h1></div>
+</div>
 
 <div class="nav">
     <a href="#">Work feed</a>
@@ -88,7 +92,9 @@
     </div>
 </div>
 
-{% include 'partials/footer.html' %}
+<div class="footer">
+    <p>&copy; 2024 Blog. All rights reserved.</p>
+</div>
 
 <script src="js/script.js"></script>
 </body>
